@@ -224,27 +224,48 @@
             margin-right: 1rem;
         }
 
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+        /* Education */
+        .education-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .skill-category h4 {
-            color: #333;
+        .education-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .education-degree {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 0.5rem;
+        }
+
+        .education-degree strong {
             font-size: 1.1rem;
+            color: #333;
         }
 
-        .skill-category ul {
-            list-style: none;
+        .education-date {
+            color: #A51C30;
+            font-weight: 500;
+        }
+
+        .education-institution {
             color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
         }
 
-        .skill-category li {
-            padding: 0.3rem 0;
+        .education-details {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+
+        .education-details p {
+            margin: 0.3rem 0;
         }
 
         /* Footer */
@@ -319,12 +340,12 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#presentations">Presentations</a></li>
             <li><a href="#teaching">Teaching</a></li>
             <li><a href="#awards">Awards</a></li>
-            <li><a href="#skills">Skills</a></li>
         </ul>
     </nav>
 
@@ -339,6 +360,33 @@
             <p>
                 My work combines cutting-edge bioelectronic devices with spatial transcriptomics and AI-driven analysis to create multimodal platforms for studying organ development, disease progression, and therapeutic interventions. I am particularly interested in developing "tissue-like" electronics that can chronically interface with biological systems while maintaining their natural properties.
             </p>
+        </section>
+
+        <!-- Education Experience -->
+        <section id="education">
+            <h2>Education Experience</h2>
+            
+            <div class="education-item">
+                <div class="education-degree">
+                    <strong>Ph.D. in Physical Chemistry</strong>
+                    <span class="education-date">2018 - 2024</span>
+                </div>
+                <div class="education-institution">Harvard University, Cambridge, MA, USA</div>
+                <div class="education-details">
+                    <p>Advisor: Prof. Jia Liu</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-degree">
+                    <strong>B.S. in Chemical Biology</strong>
+                    <span class="education-date">2014 - 2018</span>
+                </div>
+                <div class="education-institution">Tsinghua University, Beijing, China</div>
+                <div class="education-details">
+                    <p>Advisor: Prof. Hang Yin</p>
+                </div>
+            </div>
         </section>
 
         <!-- Research Interests -->
@@ -361,9 +409,9 @@
 
         <!-- Selected Publications -->
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Selected Publications (First/Co-first Author)</h2>
             <p style="margin-bottom: 1.5rem;">
-                <strong>Citations:</strong> 875 | <strong>h-index:</strong> [h-index] | 
+                <strong>Citations:</strong> 875 | 
                 <a href="https://scholar.google.com/citations?user=huZAOOQAAAAJ" target="_blank" style="color: #A51C30;">View full publication list on Google Scholar</a>
             </p>
 
@@ -378,10 +426,36 @@
                     bioRxiv, 2025
                 </div>
                 <div class="publication-links">
-                    <a href="#" target="_blank">PDF</a>
                     <a href="#" target="_blank">bioRxiv</a>
                 </div>
             </div>
+
+            <div class="publication">
+                <div class="publication-title">
+                    Multimodal charting of molecular and functional cell states via in situ electro-sequencing
+                </div>
+                <div class="publication-authors">
+                    Qiang Li*, <strong>Zuwan Lin*</strong>, Ren Liu*, Xin Tang*, Jiahao Huang, Yichun He, Xin Sui, Weiwen Tian, Haowen Zhou, Hao Sheng, Hailing Shi, Ling Xiao, Xiao Wang#, Jia Liu#
+                </div>
+                <div class="publication-journal">
+                    Cell, 2023, 186, 2002-2017
+                </div>
+                <div class="publication-links">
+                    <a href="#" target="_blank">Full text</a>
+                    <a href="#" target="_blank">Data</a>
+                    <a href="#" target="_blank">Code</a>
+                    <a href="#" target="_blank">Cover art</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 1.5rem;">
+                <em>* Denotes equal contribution, # Denotes corresponding author</em>
+            </p>
+        </section>
+
+        <!-- Other Publications -->
+        <section id="other-publications">
+            <h2>Other Publications</h2>
 
             <div class="publication">
                 <div class="publication-title">
@@ -394,25 +468,7 @@
                     bioRxiv, 2024
                 </div>
                 <div class="publication-links">
-                    <a href="#" target="_blank">PDF</a>
                     <a href="#" target="_blank">bioRxiv</a>
-                </div>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    Multimodal charting of molecular and functional cell states via in situ electro-sequencing
-                </div>
-                <div class="publication-authors">
-                    Qiang Li*, <strong>Zuwan Lin</strong>*, Ren Liu*, Xin Tang, Jiahao Huang, Yichun He, et al.
-                </div>
-                <div class="publication-journal">
-                    Cell, 2023
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">PDF</a>
-                    <a href="#" target="_blank">Journal</a>
-                    <a href="#" target="_blank">PubMed</a>
                 </div>
             </div>
 
@@ -421,22 +477,78 @@
                     Spatiotemporally resolved transcriptomics reveals the subcellular RNA kinetic landscape
                 </div>
                 <div class="publication-authors">
-                    Jingyi Ren*, Haowen Zhou*, Hu Zeng*, Connie Kangni Wang, Jiahao Huang, Xiaojie Qiu, Xin Sui, Qiang Li, Xunwei Wu, <strong>Zuwan Lin</strong>, et al.
+                    Jingyi Ren*, Haowen Zhou*, Hu Zeng*, Connie Kangni Wang, Jiahao Huang, Xiaojie Qiu, Xin Sui, Qiang Li, Xunwei Wu, <strong>Zuwan Lin</strong>, Jennifer A. Lo, Kamal Maher, Yichun He, Xin Tang, Judson Lam, Hongyu Chen, Brian Li, David E. Fisher, Jia Liu, Xiao Wang#
                 </div>
                 <div class="publication-journal">
-                    Nature Methods, 2023
+                    Nature Methods, 2023, 20, 695-705
                 </div>
                 <div class="publication-links">
+                    <a href="#" target="_blank">Full text</a>
                     <a href="#" target="_blank">PDF</a>
-                    <a href="#" target="_blank">Journal</a>
                     <a href="#" target="_blank">Data</a>
                     <a href="#" target="_blank">Code</a>
                 </div>
             </div>
 
-            <p style="margin-top: 1.5rem;">
-                <em>* Denotes equal contribution</em>
-            </p>
+            <div class="publication">
+                <div class="publication-title">
+                    Controlling organoid symmetry breaking uncovers an excitable system underlying human axial elongation
+                </div>
+                <div class="publication-authors">
+                    Giridhar M Anand, Heitor C Megale, Sean H Murphy, Theresa Weis, <strong>Zuwan Lin</strong>, Yichun He, Xiao Wang, Jia Liu, Sharad Ramanathan
+                </div>
+                <div class="publication-journal">
+                    Cell, 2023, 186, 497-512
+                </div>
+                <div class="publication-links">
+                    <a href="#" target="_blank">Full text</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">
+                    Explainable multi-task learning for multi-modality biological data analysis
+                </div>
+                <div class="publication-authors">
+                    Xin Tang, Jiawei Zhang, Yichun He, Xinhe Zhang, <strong>Zuwan Lin</strong>, Sebastian Partarrieu, Emma Bou Hanna, Zhaolin Ren, Hao Shen, Yuhong Yang, Xiao Wang, Na Li, Jie Ding, Jia Liu
+                </div>
+                <div class="publication-journal">
+                    Nature Communications, 2023, 14, 2546
+                </div>
+                <div class="publication-links">
+                    <a href="#" target="_blank">Full text</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">
+                    ClusterMap: multi-scale clustering analysis of spatial gene expression
+                </div>
+                <div class="publication-authors">
+                    Yichun He*, Xin Tang*, Jiahao Huang, Jingyi Ren, Haowen Zhou, Kevin Chen, Albert Liu, Hailing Shi, <strong>Zuwan Lin</strong>, Qiang Li, Abhishek Aditham, Johain Ounadjela, Emanuelle I Grody, Jian Shu, Jia Liu#, Xiao Wang#
+                </div>
+                <div class="publication-journal">
+                    Nature Communications, 2022
+                </div>
+                <div class="publication-links">
+                    <a href="#" target="_blank">Full text</a>
+                </div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">
+                    Stretchable Mesh Nanoelectronics for 3D Single-Cell Chronic Electrophysiology from Developing Brain Organoids
+                </div>
+                <div class="publication-authors">
+                    Paul Le Floch, <strong>Zuwan Lin</strong>, Siyuan Zhao, Ren Liu, Kazi Tasnim, Han Jiang, Jia Liu
+                </div>
+                <div class="publication-journal">
+                    Advanced Materials, 2022
+                </div>
+                <div class="publication-links">
+                    <a href="#" target="_blank">Journal</a>
+                </div>
+            </div>
         </section>
 
         <!-- Presentations -->
@@ -495,46 +607,6 @@
             </div>
             <div class="award">
                 <span class="award-year">2021</span> [PhD Award], [Previous Institution]
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Experimental Techniques</h4>
-                    <ul>
-                        <li>• Nanofabrication & Cleanroom Processing</li>
-                        <li>• Flexible/Stretchable Electronics</li>
-                        <li>• In Situ RNA Sequencing</li>
-                        <li>• Spatial Transcriptomics</li>
-                        <li>• Electrophysiology</li>
-                        <li>• Tissue Culture & Organoids</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Computational Skills</h4>
-                    <ul>
-                        <li>• Python (PyTorch, TensorFlow)</li>
-                        <li>• R (Seurat, Scanpy)</li>
-                        <li>• MATLAB</li>
-                        <li>• Machine Learning & AI</li>
-                        <li>• Image Analysis</li>
-                        <li>• Bioinformatics</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Instrumentation</h4>
-                    <ul>
-                        <li>• Confocal Microscopy</li>
-                        <li>• Electron Microscopy</li>
-                        <li>• Patch Clamp Systems</li>
-                        <li>• MEA Recording Systems</li>
-                        <li>• Flow Cytometry</li>
-                        <li>• Microelectrode Arrays</li>
-                    </ul>
-                </div>
             </div>
         </section>
     </div>
