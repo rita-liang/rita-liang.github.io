@@ -162,15 +162,49 @@
         }
 
         /* Publications */
+        .publication-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-title {
+            color: #A51C30;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
         .publication {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 1.5rem;
         }
 
         .publication:last-child {
             border-bottom: none;
             padding-bottom: 0;
+        }
+
+        .publication-image {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+        .publication-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .publication-content {
+            flex: 1;
         }
 
         .publication-title {
@@ -202,6 +236,17 @@
 
         .publication-links a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .publication {
+                flex-direction: column;
+            }
+
+            .publication-image {
+                width: 100%;
+                height: 200px;
+            }
         }
 
         /* Teaching */
@@ -328,7 +373,7 @@
                 <p>Harvard University</p>
                 <div class="contact-info">
                     <a href="mailto:your.email@fas.harvard.edu">📧 Email</a>
-                    <a href="https://scholar.google.com/citations?user=huZAOOQAAAAJ" target="_blank">🎓 Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=huZAOOQAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
                     <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a>
                     <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">🔗 ORCID</a>
                 </div>
@@ -407,208 +452,565 @@
             </p>
         </section>
 
-        <!-- Selected Publications -->
+        <!-- Publications -->
         <section id="publications">
-            <h2>Selected Publications</h2>
+            <h2>Publications</h2>
             <p style="margin-bottom: 1.5rem;">
                 <strong>Citations:</strong> 875 | 
-                <a href="https://scholar.google.com/citations?user=huZAOOQAAAAJ" target="_blank" style="color: #A51C30;">View full publication list on Google Scholar</a>
+                <a href="https://scholar.google.com/citations?user=huZAOOQAAAAJ&hl=en" target="_blank" style="color: #A51C30;">View full publication list on Google Scholar</a>
             </p>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Spatial transcriptomics AI agent charts hPSC-pancreas maturation in vivo
+            <!-- Category 1: AI agent for Biology & Control -->
+            <div class="publication-category">
+                <h3 class="category-title">AI Agent for Biology & Control</h3>
+                
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="ai-agent-figure.jpg" alt="Spike sorting AI agent">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Spike sorting AI agent
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            bioRxiv, 2024
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">bioRxiv</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    <strong>Zuwan Lin</strong>, Wenbo Wang, Arnau Marin-Llobet, Qiang Li, Samuel D Pollock, Xin Sui, et al.
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="spatial-ai-figure.jpg" alt="Spatial transcriptomics AI agent">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Spatial transcriptomics AI agent charts hPSC-pancreas maturation in vivo
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, Wenbo Wang, Arnau Marin-Llobet, Qiang Li, Samuel D Pollock, Xin Sui, et al.
+                        </div>
+                        <div class="publication-journal">
+                            bioRxiv, 2025
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">bioRxiv</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-journal">
-                    bioRxiv, 2025
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="ai-behavior-figure.jpg" alt="Autonomous AI agent">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            An autonomous AI agent for universal behavior analysis
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">bioRxiv</a>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="multi-task-figure.jpg" alt="Multi-task learning">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Explainable multi-task learning for multi-modality biological data analysis
+                        </div>
+                        <div class="publication-authors">
+                            Xin Tang, Jiawei Zhang, Yichun He, Xinhe Zhang, <strong>Zuwan Lin</strong>, Sebastian Partarrieu, Emma Bou Hanna, Zhaolin Ren, Hao Shen, Yuhong Yang, Xiao Wang, Na Li, Jie Ding, Jia Liu
+                        </div>
+                        <div class="publication-journal">
+                            Nature Communications, 2023, 14, 2546
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="ai-cyborg-figure.jpg" alt="AI-cyborg system">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            An AI-cyborg system for adaptive intelligent modulation of organoid maturation
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Brain implantation of tissue-level-soft bioelectronics via embryonic development
+            <!-- Category 2: Multimodal Systems Biology -->
+            <div class="publication-category">
+                <h3 class="category-title">Multimodal Systems Biology</h3>
+                
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="electro-seq-figure.jpg" alt="Multimodal charting">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Multimodal charting of molecular and functional cell states via in situ electro-sequencing
+                        </div>
+                        <div class="publication-authors">
+                            Qiang Li*, <strong>Zuwan Lin*</strong>, Ren Liu*, Xin Tang*, Jiahao Huang, Yichun He, Xin Sui, Weiwen Tian, Haowen Zhou, Hao Sheng, Hailing Shi, Ling Xiao, Xiao Wang#, Jia Liu#
+                        </div>
+                        <div class="publication-journal">
+                            Cell, 2023, 186, 2002-2017
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                            <a href="#" target="_blank">Data</a>
+                            <a href="#" target="_blank">Code</a>
+                            <a href="#" target="_blank">Cover art</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    Hao Sheng, Ren Liu, Qiang Li, <strong>Zuwan Lin</strong>, Yichun He, Thomas S. Blum, et al.
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="cardiac-tissue-figure.jpg" alt="Cardiac microtissues">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Tissue-embedded stretchable nanoelectronics reveal endothelial cell–mediated electrical maturation of human 3D cardiac microtissues
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            Science Advances, 2023
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-journal">
-                    bioRxiv, 2024
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="graphene-seq-figure.jpg" alt="Graphene-Seq">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            In Situ Graphene-Seq: Spatial Transcriptomics and Chronic Electrophysiology Characterization of Tissue Microenvironments
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">bioRxiv</a>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="organoid-symmetry-figure.jpg" alt="Organoid symmetry">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Controlling organoid symmetry breaking uncovers an excitable system underlying human axial elongation
+                        </div>
+                        <div class="publication-authors">
+                            Giridhar M Anand, Heitor C Megale, Sean H Murphy, Theresa Weis, <strong>Zuwan Lin</strong>, Yichun He, Xiao Wang, Jia Liu, Sharad Ramanathan
+                        </div>
+                        <div class="publication-journal">
+                            Cell, 2023, 186, 497-512
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Spike sorting AI agent
+            <!-- Category 3: Bioelectronics for Cyborg Engineering -->
+            <div class="publication-category">
+                <h3 class="category-title">Bioelectronics for Cyborg Engineering</h3>
+                
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="cyborg-organoid-figure.jpg" alt="Cyborg organoids">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Cyborg organoids integrated with stretchable nanoelectronics can be functionally mapped during development
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    <strong>Zuwan Lin</strong>, et al.
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="mesh-electronics-figure.jpg" alt="Mesh nanoelectronics">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Stretchable mesh nanoelectronics for 3D single-cell chronic electrophysiology from developing brain organoids
+                        </div>
+                        <div class="publication-authors">
+                            Paul Le Floch*, <strong>Zuwan Lin*</strong>, Siyuan Zhao, Ren Liu, Kazi Tasnim, Han Jiang, Jia Liu
+                        </div>
+                        <div class="publication-journal">
+                            Advanced Materials, 2022, 34(11), 2106829
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Journal</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-journal">
-                    bioRxiv, 2024
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="cyborg-islets-figure.jpg" alt="Cyborg islets">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Cyborg islets: implanted flexible electronics reveal principles of human islet electrical maturation
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], 2023
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">bioRxiv</a>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="organogenesis-electronics-figure.jpg" alt="Organogenesis nanoelectronics">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Cyborg organoids: implantation of nanoelectronics via organogenesis for tissue-wide electrophysiology
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Multimodal charting of molecular and functional cell states via in situ electro-sequencing
+            <!-- Category 4: Neural Interfaces & In Vivo Bioelectronics -->
+            <div class="publication-category">
+                <h3 class="category-title">Neural Interfaces & In Vivo Bioelectronics</h3>
+                
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="brain-implant-figure.jpg" alt="Brain implantation">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Brain implantation of tissue-level-soft bioelectronics via embryonic development
+                        </div>
+                        <div class="publication-authors">
+                            Hao Sheng, Ren Liu, Qiang Li, <strong>Zuwan Lin</strong>, Yichun He, Thomas S. Blum, et al.
+                        </div>
+                        <div class="publication-journal">
+                            bioRxiv, 2024
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">bioRxiv</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    Qiang Li*, <strong>Zuwan Lin*</strong>, Ren Liu*, Xin Tang*, Jiahao Huang, Yichun He, Xin Sui, Weiwen Tian, Haowen Zhou, Hao Sheng, Hailing Shi, Ling Xiao, Xiao Wang#, Jia Liu#
-                </div>
-                <div class="publication-journal">
-                    Cell, 2023, 186, 2002-2017
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
-                    <a href="#" target="_blank">Data</a>
-                    <a href="#" target="_blank">Code</a>
-                    <a href="#" target="_blank">Cover art</a>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="neural-tracking-figure.jpg" alt="Neural tracking">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Tracking neural activity from the same cells during the entire adult life of mice
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Tissue-embedded stretchable nanoelectronics reveal endothelial cell–mediated electrical maturation of human 3D cardiac microtissues
+            <!-- Category 5: Spatial Biology & High-Resolution Tissue Mapping -->
+            <div class="publication-category">
+                <h3 class="category-title">Spatial Biology & High-Resolution Tissue Mapping</h3>
+                
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="spatial-atlas-figure.jpg" alt="Spatial atlas">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Spatial atlas of the mouse central nervous system at molecular resolution
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    <strong>Zuwan Lin</strong>, et al.
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="clustermap-figure.jpg" alt="ClusterMap">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            ClusterMap for multi-scale clustering analysis of spatial gene expression
+                        </div>
+                        <div class="publication-authors">
+                            Yichun He*, Xin Tang*, Jiahao Huang, Jingyi Ren, Haowen Zhou, Kevin Chen, Albert Liu, Hailing Shi, <strong>Zuwan Lin</strong>, Qiang Li, Abhishek Aditham, Johain Ounadjela, Emanuelle I Grody, Jian Shu, Jia Liu#, Xiao Wang#
+                        </div>
+                        <div class="publication-journal">
+                            Nature Communications, 2022
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-journal">
-                    Science Advances, 2023
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="rna-kinetics-figure.jpg" alt="RNA kinetics">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Spatiotemporally resolved transcriptomics reveals the subcellular RNA kinetic landscape
+                        </div>
+                        <div class="publication-authors">
+                            Jingyi Ren*, Haowen Zhou*, Hu Zeng*, Connie Kangni Wang, Jiahao Huang, Xiaojie Qiu, Xin Sui, Qiang Li, Xunwei Wu, <strong>Zuwan Lin</strong>, Jennifer A. Lo, Kamal Maher, Yichun He, Xin Tang, Judson Lam, Hongyu Chen, Brian Li, David E. Fisher, Jia Liu, Xiao Wang#
+                        </div>
+                        <div class="publication-journal">
+                            Nature Methods, 2023, 20, 695-705
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Full text</a>
+                            <a href="#" target="_blank">PDF</a>
+                            <a href="#" target="_blank">Data</a>
+                            <a href="#" target="_blank">Code</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
+
+                <div class="publication">
+                    <div class="publication-image">
+                        <img src="3d-tissue-figure.jpg" alt="3D tissue transcriptomics">
+                    </div>
+                    <div class="publication-content">
+                        <div class="publication-title">
+                            Scalable spatial single-cell transcriptomics and translatomics in 3D thick tissue blocks
+                        </div>
+                        <div class="publication-authors">
+                            <strong>Zuwan Lin</strong>, et al.
+                        </div>
+                        <div class="publication-journal">
+                            [Journal], [Year]
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" target="_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>    <div class="publication-links">
+                        <a href="#" target="_blank">Journal</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Cyborg islets: implanted flexible electronics reveal principles of human islet electrical maturation
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Zuwan Lin</strong>, et al.
+                    </div>
+                    <div class="publication-journal">
+                        [Journal], 2023
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Link</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Cyborg organoids: implantation of nanoelectronics via organogenesis for tissue-wide electrophysiology
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Zuwan Lin</strong>, et al.
+                    </div>
+                    <div class="publication-journal">
+                        [Journal], [Year]
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Link</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Cyborg islets: implanted flexible electronics reveal principles of human islet electrical maturation
+            <!-- Category 4: Neural Interfaces & In Vivo Bioelectronics -->
+            <div class="publication-category">
+                <h3 class="category-title">Neural Interfaces & In Vivo Bioelectronics</h3>
+                
+                <div class="publication">
+                    <div class="publication-title">
+                        Brain implantation of tissue-level-soft bioelectronics via embryonic development
+                    </div>
+                    <div class="publication-authors">
+                        Hao Sheng, Ren Liu, Qiang Li, <strong>Zuwan Lin</strong>, Yichun He, Thomas S. Blum, et al.
+                    </div>
+                    <div class="publication-journal">
+                        bioRxiv, 2024
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">bioRxiv</a>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    <strong>Zuwan Lin</strong>, et al.
-                </div>
-                <div class="publication-journal">
-                    [Journal], 2023
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Link</a>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Tracking neural activity from the same cells during the entire adult life of mice
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Zuwan Lin</strong>, et al.
+                    </div>
+                    <div class="publication-journal">
+                        [Journal], [Year]
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Link</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Stretchable mesh nanoelectronics for 3D single-cell chronic electrophysiology from developing brain organoids
+            <!-- Category 5: Spatial Biology & High-Resolution Tissue Mapping -->
+            <div class="publication-category">
+                <h3 class="category-title">Spatial Biology & High-Resolution Tissue Mapping</h3>
+                
+                <div class="publication">
+                    <div class="publication-title">
+                        Spatial atlas of the mouse central nervous system at molecular resolution
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Zuwan Lin</strong>, et al.
+                    </div>
+                    <div class="publication-journal">
+                        [Journal], [Year]
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Link</a>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    Paul Le Floch*, <strong>Zuwan Lin*</strong>, Siyuan Zhao, Ren Liu, Kazi Tasnim, Han Jiang, Jia Liu
-                </div>
-                <div class="publication-journal">
-                    Advanced Materials, 2022, 34(11), 2106829
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Journal</a>
-                </div>
-            </div>
 
-            <div class="publication">
-                <div class="publication-title">
-                    Cyborg organoids integrated with stretchable nanoelectronics can be functionally mapped during development
+                <div class="publication">
+                    <div class="publication-title">
+                        ClusterMap for multi-scale clustering analysis of spatial gene expression
+                    </div>
+                    <div class="publication-authors">
+                        Yichun He*, Xin Tang*, Jiahao Huang, Jingyi Ren, Haowen Zhou, Kevin Chen, Albert Liu, Hailing Shi, <strong>Zuwan Lin</strong>, Qiang Li, Abhishek Aditham, Johain Ounadjela, Emanuelle I Grody, Jian Shu, Jia Liu#, Xiao Wang#
+                    </div>
+                    <div class="publication-journal">
+                        Nature Communications, 2022
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Full text</a>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    <strong>Zuwan Lin</strong>, et al.
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Spatiotemporally resolved transcriptomics reveals the subcellular RNA kinetic landscape
+                    </div>
+                    <div class="publication-authors">
+                        Jingyi Ren*, Haowen Zhou*, Hu Zeng*, Connie Kangni Wang, Jiahao Huang, Xiaojie Qiu, Xin Sui, Qiang Li, Xunwei Wu, <strong>Zuwan Lin</strong>, Jennifer A. Lo, Kamal Maher, Yichun He, Xin Tang, Judson Lam, Hongyu Chen, Brian Li, David E. Fisher, Jia Liu, Xiao Wang#
+                    </div>
+                    <div class="publication-journal">
+                        Nature Methods, 2023, 20, 695-705
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Full text</a>
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">Data</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
                 </div>
-                <div class="publication-journal">
-                    [Journal], [Year]
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Link</a>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Scalable spatial single-cell transcriptomics and translatomics in 3D thick tissue blocks
+                    </div>
+                    <div class="publication-authors">
+                        <strong>Zuwan Lin</strong>, et al.
+                    </div>
+                    <div class="publication-journal">
+                        [Journal], [Year]
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">Link</a>
+                    </div>
                 </div>
             </div>
 
             <p style="margin-top: 1.5rem;">
                 <em>* Denotes equal contribution, # Denotes corresponding author</em>
             </p>
-        </section>
-
-        <!-- Other Publications -->
-        <section id="other-publications">
-            <h2>Other Publications</h2>
-
-            <div class="publication">
-                <div class="publication-title">
-                    Spatiotemporally resolved transcriptomics reveals the subcellular RNA kinetic landscape
-                </div>
-                <div class="publication-authors">
-                    Jingyi Ren*, Haowen Zhou*, Hu Zeng*, Connie Kangni Wang, Jiahao Huang, Xiaojie Qiu, Xin Sui, Qiang Li, Xunwei Wu, <strong>Zuwan Lin</strong>, Jennifer A. Lo, Kamal Maher, Yichun He, Xin Tang, Judson Lam, Hongyu Chen, Brian Li, David E. Fisher, Jia Liu, Xiao Wang#
-                </div>
-                <div class="publication-journal">
-                    Nature Methods, 2023, 20, 695-705
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
-                    <a href="#" target="_blank">PDF</a>
-                    <a href="#" target="_blank">Data</a>
-                    <a href="#" target="_blank">Code</a>
-                </div>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    Controlling organoid symmetry breaking uncovers an excitable system underlying human axial elongation
-                </div>
-                <div class="publication-authors">
-                    Giridhar M Anand, Heitor C Megale, Sean H Murphy, Theresa Weis, <strong>Zuwan Lin</strong>, Yichun He, Xiao Wang, Jia Liu, Sharad Ramanathan
-                </div>
-                <div class="publication-journal">
-                    Cell, 2023, 186, 497-512
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
-                </div>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    Explainable multi-task learning for multi-modality biological data analysis
-                </div>
-                <div class="publication-authors">
-                    Xin Tang, Jiawei Zhang, Yichun He, Xinhe Zhang, <strong>Zuwan Lin</strong>, Sebastian Partarrieu, Emma Bou Hanna, Zhaolin Ren, Hao Shen, Yuhong Yang, Xiao Wang, Na Li, Jie Ding, Jia Liu
-                </div>
-                <div class="publication-journal">
-                    Nature Communications, 2023, 14, 2546
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
-                </div>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    ClusterMap: multi-scale clustering analysis of spatial gene expression
-                </div>
-                <div class="publication-authors">
-                    Yichun He*, Xin Tang*, Jiahao Huang, Jingyi Ren, Haowen Zhou, Kevin Chen, Albert Liu, Hailing Shi, <strong>Zuwan Lin</strong>, Qiang Li, Abhishek Aditham, Johain Ounadjela, Emanuelle I Grody, Jian Shu, Jia Liu#, Xiao Wang#
-                </div>
-                <div class="publication-journal">
-                    Nature Communications, 2022
-                </div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">Full text</a>
-                </div>
-            </div>
         </section>
 
         <!-- Presentations -->
